@@ -8,6 +8,7 @@ toc::[]
 The code is used for component segmentation of http://irc.cs.sdu.edu.cn/~yunhai/public_html/ssl/ssd.htm[the shape COSEG Dataset] with component labels, and then the segmented components are filled with holes, so as to get water-tight data set components.  
 
 ### Data set placement
+
 [source,shell]
 ----
     //model path: eg.data is http://irc.cs.sdu.edu.cn/~yunhai/public_html/ssl/data/Large-Chairs/shapes.zip
@@ -15,7 +16,7 @@ The code is used for component segmentation of http://irc.cs.sdu.edu.cn/~yunhai/
 
 	//label path: eg.data is http://irc.cs.sdu.edu.cn/~yunhai/public_html/ssl/data/Large-Chairs/gt.zip
 	string pathLable = "../Data/gt/";
-    
+
 	//output path
 	string pathOutput = "../Data/offOutput/";
 ----
