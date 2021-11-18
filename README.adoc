@@ -7,13 +7,26 @@ toc::[]
 # Introduction
 The code is used for component segmentation of http://irc.cs.sdu.edu.cn/~yunhai/public_html/ssl/ssd.htm[the shape COSEG Dataset] with component labels, and then the segmented components are filled with holes, so as to get water-tight data set components.  
 
+### Data set placement
+[source,shell]
+----
+    //model path: eg.data is http://irc.cs.sdu.edu.cn/~yunhai/public_html/ssl/data/Large-Chairs/shapes.zip
+	string pathModel = "../Data/shapes/";
+
+	//label path: eg.data is http://irc.cs.sdu.edu.cn/~yunhai/public_html/ssl/data/Large-Chairs/gt.zip
+	string pathLable = "../Data/gt/";
+    
+	//output path
+	string pathOutput = "../Data/offOutput/";
+----
+
 # Compiling the code
 The code only dependancies are https://github.com/libigl/libigl[libigl] and http://eigen.tuxfamily.org/index.php?title=Main_Page[Eigen]. Both of which are included within this repository. We use CMake for building. If on Linux or OS X, you can build it in the terminal by doing something like:
 [source,shell]
 ----
-mkdir build
-cd build
-cmake ..
-make
+    mkdir build
+    cd build
+    cmake ..
+    make
 ----
 If on Windows, create a `build/` folder, and run `cmake ..` from inside that folder. This will create a visual studio solution(if you have visual studio). Launch that solution, and then simply compile the project named `Disintegration`.
