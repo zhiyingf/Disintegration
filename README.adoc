@@ -22,6 +22,7 @@ string pathOutput = "../Data/offOutput/";
 ----
 
 # Compiling the code
+### Linux or OS X
 The code only dependancies are https://github.com/libigl/libigl[libigl] and http://eigen.tuxfamily.org/index.php?title=Main_Page[Eigen]. Both of which are included within this repository. We use CMake for building. If on Linux or OS X, you can build it in the terminal by doing something like:
 [source,shell]
 ----
@@ -30,4 +31,5 @@ cd build
 cmake ..
 make
 ----
+### Windows
 If on Windows, create a `build/` folder, and run `cmake ..` from inside that folder. This will create a visual studio solution(if you have visual studio). Launch that solution, and then simply compile the project named `Disintegration`.
